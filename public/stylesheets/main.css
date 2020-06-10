@@ -3,6 +3,8 @@
 @import 'shared/header.css';
 @import 'shared/buttons.css';
 @import 'shared/form.css';
+@import 'shared/author.css';
+@import 'shared/books.css';
 
 :root {
   font-family: 'Gotham Rounded';
@@ -33,7 +35,6 @@ body {
   font-weight: 500;
 }
 
-.recently-added:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 9px 9px rgba(145, 92, 182, .1);
-  }
+.error-message {
+  color: hsl(var(--color-danger-hue), 100%, 50%);
+}

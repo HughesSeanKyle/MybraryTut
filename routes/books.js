@@ -45,8 +45,7 @@ router.post('/', async (req, res) => {
 
   try {
     const newBook = await book.save()
-    // res.redirect(`books/${newBook.id}`)
-    res.redirect(`books`)
+    res.redirect(`books/${newBook.id}`)
   } catch {
     renderNewPage(res, book, true)
   }
@@ -146,7 +145,7 @@ async function renderFormPage(res, book, form, hasError = false) {
   }
 }
 
-async function saveCover(book, coverEncoded) {
+function saveCover(book, coverEncoded) {
   if (coverEncoded == null) return
   const cover = JSON.parse(coverEncoded)
   if (cover != null && imageMimeTypes.includes(cover.type)) {
